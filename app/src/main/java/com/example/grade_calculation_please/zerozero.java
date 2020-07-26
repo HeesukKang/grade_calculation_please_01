@@ -27,18 +27,18 @@ import android.content.Context;
 public class zerozero extends AppCompatActivity {
 
 
-    double totalKorgrade = 0;
-    double totalEnggrade = 0;
+    double totalKorgrade = 0; // 4.5만점 총평점
+    double totalEnggrade = 0; // 4.0만점 총평점
     double totalcredit = 0; // 총 학점
-    double totalKorgradesum = 0;
-    double totalEnggradesum = 0;
+    double totalKorgradesum = 0; // 4.5만점 총평점 분자
+    double totalEnggradesum = 0; // 4.0만점 총평점 분자
     double  totalcreditShow = 0; // 패논패 제외 실질적인 총 학점
 
-    double totalKorgradeM = 0;
-    double totalEnggradeM = 0;
-    double totalcreditM = 0;
-    double totalKorgradesumM = 0;
-    double totalEnggradesumM = 0; //전공용
+    double totalKorgradeM = 0; // 4.5만점 전공평점
+    double totalEnggradeM = 0; // 4.0만점 전공평점
+    double totalcreditM = 0; // 전공 학점
+    double totalKorgradesumM = 0; //4.5만점 전공평점 분자
+    double totalEnggradesumM = 0; //4.0만점 전공평점 분자
 
 
 
@@ -47,10 +47,9 @@ public class zerozero extends AppCompatActivity {
     EditText oneonesubject1,oneonesubject2,oneonesubject3,oneonesubject4,oneonesubject5,oneonesubject6,oneonesubject7,oneonesubject8,oneonesubject9,oneonesubject10;
     private Button btn, intentbtn; //버튼 누르면 학점 계산
     CheckBox[] oneonecheck = new CheckBox[10];
-    private double RealcreditSum;
 
-    String Name = null;
-    int[] check_first = new int[9];
+    String Name = null; // Name 안에는 "몇학년 몇학기"인지 담긴다.
+    int[] check_first = new int[9]; // 버튼을 처음 누른것인지 체크한다
     Context context = null;
     File file = null;
     BufferedWriter buf = null;
@@ -60,9 +59,9 @@ public class zerozero extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zerozero);
         Intent intent = getIntent();
-        Name = intent.getExtras().getString("name");
-        TextView Naming = (TextView) findViewById(R.id.naming);
-        Naming.setText(Name);
+        Name = intent.getExtras().getString("name"); //메인에서 몇학년 몇학기 눌렀는지 가져온다.
+        TextView Naming = (TextView) findViewById(R.id.naming); //몇학년 몇학기 써있는 상단의 textview
+        Naming.setText(Name); // 그 텍스트뷰에 몇학년 몇학기인지 쓴다.
         context = getApplicationContext();
 
         oneonecredit1 = (Spinner) findViewById(R.id.oneonecredit1);
@@ -74,7 +73,7 @@ public class zerozero extends AppCompatActivity {
         oneonecredit7 = (Spinner) findViewById(R.id.oneonecredit7);
         oneonecredit8 = (Spinner) findViewById(R.id.oneonecredit8);
         oneonecredit9 = (Spinner) findViewById(R.id.oneonecredit9);
-        oneonecredit10 = (Spinner) findViewById(R.id.oneonecredit10);
+        oneonecredit10 = (Spinner) findViewById(R.id.oneonecredit10); // 몇학점인지
 
         oneonegrade1 = (Spinner) findViewById(R.id.oneonegrade1);
         oneonegrade2 = (Spinner) findViewById(R.id.oneonegrade2);
@@ -85,7 +84,7 @@ public class zerozero extends AppCompatActivity {
         oneonegrade7 = (Spinner) findViewById(R.id.oneonegrade7);
         oneonegrade8 = (Spinner) findViewById(R.id.oneonegrade8);
         oneonegrade9 = (Spinner) findViewById(R.id.oneonegrade9);
-        oneonegrade10 = (Spinner) findViewById(R.id.oneonegrade10);
+        oneonegrade10 = (Spinner) findViewById(R.id.oneonegrade10); // 각각 평점이 어떻게 되는지
 
 
         oneonesubject1 = (EditText) findViewById(R.id.oneonesubject1);
@@ -97,7 +96,7 @@ public class zerozero extends AppCompatActivity {
         oneonesubject7 = (EditText) findViewById(R.id.oneonesubject7);
         oneonesubject8 = (EditText) findViewById(R.id.oneonesubject8);
         oneonesubject9 = (EditText) findViewById(R.id.oneonesubject9);
-        oneonesubject10 = (EditText) findViewById(R.id.oneonesubject10);
+        oneonesubject10 = (EditText) findViewById(R.id.oneonesubject10); // 과목이름은 어떻게 되는지
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.credit, android.R.layout.simple_spinner_dropdown_item);
@@ -110,7 +109,7 @@ public class zerozero extends AppCompatActivity {
         oneonecredit7.setAdapter(adapter);
         oneonecredit8.setAdapter(adapter);
         oneonecredit9.setAdapter(adapter);
-        oneonecredit10.setAdapter(adapter);
+        oneonecredit10.setAdapter(adapter); // 스피너 쓰기 위한 어답터(1,2,3학점인지)
 
 
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.grade, android.R.layout.simple_spinner_dropdown_item);
@@ -123,7 +122,7 @@ public class zerozero extends AppCompatActivity {
         oneonegrade7.setAdapter(adapter1);
         oneonegrade8.setAdapter(adapter1);
         oneonegrade9.setAdapter(adapter1);
-        oneonegrade10.setAdapter(adapter1);
+        oneonegrade10.setAdapter(adapter1); // 스피너 쓰기 위한 어답터(A+부터 패논패)
 
         btn = findViewById(R.id.calc);
 
@@ -188,9 +187,9 @@ public class zerozero extends AppCompatActivity {
 
 
 
-                double[] oneonegradeKor = new double[10];
-                double[] oneonegradeEng = new double[10];
-                double[] oneonecreditnum = new double[10];
+                double[] oneonegradeKor = new double[10]; //각각 평점 어떻게 되는지
+                double[] oneonegradeEng = new double[10]; //각각 평점 어떻게 되는지
+                double[] oneonecreditnum = new double[10]; //각각 학점이 어떻게 되는지
 
 
                 for (int i = 0; i < 10; i++) {
@@ -262,10 +261,12 @@ public class zerozero extends AppCompatActivity {
 
 
 
-                totalcredit = 0;
-                totalcreditShow = 0;
-                totalKorgradesum = 0;
-                totalEnggradesum = 0;
+                totalcredit = 0; // 총학점
+                totalcreditShow = 0; // 패논패과목 제외 실제 분모에 들어가는 학점
+                totalKorgradesum = 0; //4.5만점 분자계산
+                totalEnggradesum = 0; //4.0만점 분자계산
+//                계산할때마다 전부 0으로 초기화해서 다시 계산한다.
+
                 for (int j = 0; j < 10; j++) {
                     if(oneonesubject[j].getBytes().length <= 0){
                     } else if (oneonegrade[j].equals("P") || oneonegrade[j].equals("NP") ) {
@@ -277,9 +278,9 @@ public class zerozero extends AppCompatActivity {
 
                 }
 
-                totalcreditM = 0;
-                totalKorgradesumM = 0;
-                totalEnggradesumM = 0;
+                totalcreditM = 0; //전공 총학점
+                totalKorgradesumM = 0;//전공 4.5만점 분자계산
+                totalEnggradesumM = 0;//전공 4.0만점 분자계산
 
                 for (int j = 0; j < 10; j++) {
                     if(oneonecheck[j].isChecked()) {
