@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/naming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1학년 1학기 성적입력"
+        android:textSize="30dp"
+        android:gravity="center">
+
+    </TextView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="4.5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="과목명"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="2"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="학점"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="성적"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="전공"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="0.5"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject1"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit1"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade1"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck1"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject2"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit2"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade2"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck2"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject3"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit3"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade3"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck3"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject4"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit4"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade4"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck4"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject5"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit5"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade5"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck5"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject6"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit6"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade6"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck6"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject7"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit7"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade7"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck7"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject8"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit8"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade8"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck8"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject9"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit9"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade9"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck9"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/oneonesubject10"
+            android:gravity="center"
+            android:text="" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonecredit10"
+            android:gravity="center"
+            android:entries="@array/credit" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/oneonegrade10"
+            android:gravity="center"
+            android:entries="@array/grade" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/oneonecheck10"
+            android:gravity="center" />
+    </TableRow>
+    <TableRow
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <Button
+            android:id="@+id/calc"
+            android:layout_height="wrap_content"
+            android:text="계산" />
+
+        <Button
+            android:id="@+id/intentbtn"
+            android:layout_height="wrap_content"
+            android:text="적용" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/creditview"
+            android:gravity="center"
+            android:text="취득학점" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/creditview1"
+            android:gravity="center"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:id="@+id/Korgradeview"
+            android:gravity="center"
+            android:text="평균학점(한국)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/Korgradeview1"
+            android:gravity="center"
+            android:text="" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:id="@+id/Enggradeview"
+            android:gravity="center"
+            android:text="평균학점(해외)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/Enggradeview1"
+            android:gravity="center"
+            android:text="" />
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="4.5">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:id="@+id/MajorgradeviewKor"
+            android:gravity="center"
+            android:text="전공평점(한국)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/Majorgradeview1Kor"
+            android:gravity="center"
+            android:text="" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:id="@+id/MajorgradeviewEng"
+            android:gravity="center"
+            android:text="전공평점(해외)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:id="@+id/Majorgradeview1Eng"
+            android:gravity="center"
+            android:text="" />
+
+
+
+
+    </TableRow>
+
+</TableLayout>
