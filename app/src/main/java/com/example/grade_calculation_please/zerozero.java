@@ -46,7 +46,7 @@ public class zerozero extends AppCompatActivity {
     private Spinner oneonegrade1, oneonegrade2, oneonegrade3, oneonegrade4, oneonegrade5, oneonegrade6, oneonegrade7, oneonegrade8, oneonegrade9, oneonegrade10;
     EditText oneonesubject1,oneonesubject2,oneonesubject3,oneonesubject4,oneonesubject5,oneonesubject6,oneonesubject7,oneonesubject8,oneonesubject9,oneonesubject10;
     private Button btn, intentbtn; //버튼 누르면 학점 계산
-    CheckBox[] oneonecheck = new CheckBox[10];
+    CheckBox[] oneonecheck = new CheckBox[10]; // 전공인지 아닌지 체크
 
     String Name = null; // Name 안에는 "몇학년 몇학기"인지 담긴다.
     int[] check_first = new int[9]; // 버튼을 처음 누른것인지 체크한다
